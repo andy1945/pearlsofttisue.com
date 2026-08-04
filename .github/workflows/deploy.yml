@@ -16,7 +16,7 @@ jobs:
             - name: Use Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: "24" # match your project's Node version (change if needed)
+                  node-version: "24"
                   cache: "npm"
 
             - name: Install dependencies
@@ -31,9 +31,8 @@ jobs:
                   server: ${{ secrets.FTP_HOST }}
                   username: ${{ secrets.FTP_USERNAME }}
                   password: ${{ secrets.FTP_PASSWORD }}
-                  port: ${{ secrets.FTP_PORT }} # optional
-                  protocol: ${{ secrets.FTP_PROTOCOL }} # optional, e.g. 'ftps'
-                  local-dir: ./dist/ # upload the Vite build output
-                  #                 server-dir: public_html/ # adjust to your document root or subfolder
-                  server-dir: /
+                  port: ${{ secrets.FTP_PORT }}
+                  protocol: ${{ secrets.FTP_PROTOCOL }}
+                  local-dir: ./.output/public/   # <--- Updated to point to Nitro's static export folder
+                  server-dir: /                  # or public_html/ depending on your cPanel document root
                   dry-run: false
