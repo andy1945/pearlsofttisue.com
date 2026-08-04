@@ -33,6 +33,6 @@ jobs:
                   password: ${{ secrets.FTP_PASSWORD }}
                   port: ${{ secrets.FTP_PORT }}
                   protocol: ${{ secrets.FTP_PROTOCOL }}
-                  local-dir: ./.output/public/   # <--- Updated to point to Nitro's static export folder
+                  local-dir: ./dist/   # Build output is now in dist/
                   server-dir: public_html/                  # or public_html/ depending on your cPanel document root
                   dry-run: false

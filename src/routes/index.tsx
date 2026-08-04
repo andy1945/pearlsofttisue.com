@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Leaf, Layers, Feather, ShieldCheck, Recycle, Droplets, Sparkles } from "lucide-react";
 import { CountUp, Marquee, Reveal, SplitText, TiltCard } from "@/components/motion-primitives";
@@ -9,28 +8,7 @@ import pack12 from "@/assets/pack-12.jpeg";
 import pack10 from "@/assets/pack-10.jpeg";
 import pack24 from "@/assets/pack-24.jpeg";
 import napkins from "@/assets/napkins.jpeg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Pearl Soft Tissue | Softness You Can Trust" },
-      {
-        name: "description",
-        content:
-          "Pearl Soft Tissue makes ultra-soft, strong and absorbent 2-ply toilet tissue, paper towels and napkins. Proudly Ugandan, UNBS certified.",
-      },
-      { property: "og:title", content: "Pearl Soft Tissue | Softness You Can Trust" },
-      {
-        property: "og:description",
-        content:
-          "Pearl Soft Tissue makes ultra-soft, strong and absorbent 2-ply toilet tissue, paper towels and napkins. Proudly Ugandan, UNBS certified.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Index,
-});
+export default Index;
 
 const promises = [
   { icon: Leaf, title: "Ultra Soft", copy: "Gentle 2-ply fibre engineered for a cloud-like feel." },
