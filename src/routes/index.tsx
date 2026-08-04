@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Leaf, Layers, Feather, ShieldCheck, Recycle, Droplets, Sparkles } from "lucide-react";
+import { Platform, PixelRatio } from "react-bits";
 import { CountUp, Marquee, Reveal, SplitText, TiltCard } from "@/components/motion-primitives";
 import logo from "@/assets/logo-mark.png";
 import heroRange from "@/assets/hero-products.jpeg";
@@ -74,8 +75,8 @@ function Index() {
               transition={{ delay: 0.6, duration: 0.7 }}
               className="mt-6 max-w-md text-lg text-muted-foreground"
             >
-              Pearl Soft Tissue is crafted to deliver exceptional softness, strength and care for
-              your family — every single day.
+              Pearl Soft Tissue brings cloud-like softness and dependable strength to every roll.
+              Perfect for sensitive skin, tough on spills, and made for everyday family life.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -87,13 +88,13 @@ function Index() {
                 href="#products"
                 className="surface-brand shadow-soft rounded-full px-7 py-3 font-display text-sm font-semibold transition-transform hover:scale-[1.03]"
               >
-                Explore the range
+                Shop the collection
               </a>
               <a
                 href="#contact"
                 className="rounded-full border border-primary/30 px-7 py-3 font-display text-sm font-semibold text-primary transition-colors hover:bg-primary/5"
               >
-                Become a stockist
+                Find a stockist
               </a>
             </motion.div>
           </div>
@@ -112,6 +113,37 @@ function Index() {
             </TiltCard>
           </motion.div>
         </div>
+
+        <section className="mx-auto max-w-6xl px-6 py-14">
+          <div className="rounded-[2rem] border border-border bg-slate-50 p-10 shadow-soft">
+            <h2 className="text-3xl font-semibold text-slate-950">
+              Softness designed to make every day feel more comfortable.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600">
+              Pearl Soft Tissue is made with gentle, absorbent fibres so you can trust each sheet to care for sensitive skin and clean up life’s everyday moments.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-3xl bg-white p-6 shadow-sm">
+                <p className="text-4xl font-semibold text-primary">2</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.25em] text-muted-foreground">
+                  ply comfort
+                </p>
+              </div>
+              <div className="rounded-3xl bg-white p-6 shadow-sm">
+                <p className="text-4xl font-semibold text-accent">100</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.25em] text-muted-foreground">
+                  sheets per roll
+                </p>
+              </div>
+              <div className="rounded-3xl bg-white p-6 shadow-sm">
+                <p className="text-4xl font-semibold text-primary">Fast</p>
+                <p className="mt-2 text-sm uppercase tracking-[0.25em] text-muted-foreground">
+                  septic-safe breakdown
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div className="surface-brand">
           <Marquee
@@ -132,7 +164,7 @@ function Index() {
       <section id="quality" className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
           <h2 className="max-w-xl font-display text-3xl font-semibold md:text-4xl">
-            Pure comfort. <span className="text-accent">Every time.</span>
+            Pure comfort that works as hard as it feels.
           </h2>
         </Reveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -158,7 +190,7 @@ function Index() {
               The range
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold md:text-4xl">
-              Made for every room in the home
+              Premium tissue built for home, kitchen, and family life
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -264,7 +296,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 text-center">
           <img src={logo} alt="Pearl Soft Tissue" className="h-9 w-auto" />
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Pearl Soft Tissue · Softness You Can Trust
+            © {new Date().getFullYear()} Pearl Soft Tissue · Softness you can trust, strength you can rely on.
           </p>
         </div>
       </footer>
